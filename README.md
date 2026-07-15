@@ -3,7 +3,7 @@ MIMIC-IV Sepsis Cohort Reconstruction
 Replication of the early-vasopressor → 28-day mortality sepsis cohort
 (paper arXiv 2604.16763), built from raw MEDS event-stream data (no derived tables).
 
-Full methods, codebook, and validation: see cohort_construction.md.
+
 
 
 Pipeline — run order
@@ -63,11 +63,11 @@ onset_sensitivity.py — ATE under alternative onset definitions
 
 
 
-Current status
+Data (not in repo)
 
-Cohort validates well against the paper on structure:
-
-QuantityThis cohortPaperSepsis-3 patients18,31221,859Treated rate10.5%10.0%28-day mortality17.3%17.3%
+MIMIC-IV is credentialed PHI — no data files are committed. Expected locally under
+data/: MEDS shards, prescriptions.csv, patients.csv, admissions.csv,
+icustays.csv, diagnoses_icd.csv, d_labitems.csv, d_items.csv.
 
 Open issue: crude ATE ≈ −0.008 and PS-adjusted estimates disagree
 (IPW +0.012, matching −0.059, regression −0.057) vs the paper's structured-only
